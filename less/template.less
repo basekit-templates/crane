@@ -1,0 +1,235 @@
+// --------------------------------
+// Crane: template.less
+// --------------------------------
+
+// Contains various global layout styles.
+
+
+
+// -----------------------------
+// 2. Media Queries
+// -----------------------------
+
+
+@bp-tablet: ~"only screen and (max-width: 800px)";
+@bp-mobile: ~"only screen and (max-width: 600px)";
+
+
+
+
+// -----------------------------
+// 3. Typography
+// -----------------------------
+
+
+    // Anchor links
+    a {
+        color: @button-color;
+    }
+
+
+
+
+// -----------------------------
+// 3. Global Styles
+// -----------------------------
+
+
+// Body
+// ---------------
+
+body {
+    background: @bg-color-alt;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+// Container
+// ---------------
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+
+// -----------------------------
+// 4. #Template Header
+// -----------------------------
+
+.template-header {
+    min-height: 300px;
+
+    // Background Color
+    background-color: @contrast-color;
+
+
+
+    // Container
+    // ---------------
+
+    .container {
+        height: 100%;
+        min-height: 250px;
+
+        .flex(@display: flex);
+        .flex-direction(@direction: column);
+        .justify-content(@justify: center);
+    }
+
+
+
+    // Header Top
+    // ---------------
+
+    // Flexbox mixins to position the company info and the navigation
+    .header--top {
+        .flex(@display: flex); // Mixins
+        .align-content(@align: center);
+        .justify-content(@justify: space-between); // Mixins
+
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+
+
+        .align-content(@align: flex-start);
+    }
+
+
+
+    .company-info {
+        .flex(@display: flex);
+        .align-content(@align: center);
+
+        padding: 14px 0;
+        margin: 1em 0;
+    }
+
+
+
+    // Header Content
+    // ----------------
+
+    .header--content {
+
+        -webkit-flex: 1 1 40%;
+        -ms-flex: 1 1 40%;
+        flex: 1 1 40%;
+
+        max-width: 50%;
+        text-align: center;
+        margin: 0 auto;
+
+        h1 {
+            color: @title-color;
+        }
+
+
+        @media @bp-tablet {
+            max-width: 80%;
+
+            -webkit-flex: 1 1 50%;
+            -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+        }
+
+        @media @bp-mobile {
+            max-width: 90%;
+
+            -webkit-flex: 1 1 80%;
+            -ms-flex: 1 1 80%;
+            flex: 1 1 80%;
+        }
+    }
+
+
+
+    // Mobile
+    // ----------------
+
+    @media @bp-tablet {
+        .flex-wrap(@wrap: wrap); // Mixins
+    }
+
+
+    @media @bp-mobile {
+        .justify-content(@justify: center); // Mixins
+    }
+
+
+
+
+    // Home Page Header
+    // ----------------
+
+    &.home-page {
+        .container {
+            min-height: 500px;
+        }
+        min-height: 600px;
+
+        @media @bp-tablet {
+            min-height: 400px;
+        }
+    }
+
+
+}
+
+
+// -----------------------------
+// 4. Page Layout
+// -----------------------------
+
+
+// .page-wrapper {
+//     padding-top: 40px;
+
+//     @media @bp-mobile {
+//         padding-top: 70px;
+//     }
+// }
+
+
+.template-content {
+    margin-top: 60px;
+
+    &.default {
+        background-color: @bg-color;
+        margin-top: 0;
+        padding: 60px 20px;
+    }
+
+    @media @bp-mobile {
+        margin-top: 40px;
+    }
+}
+
+
+// .home-copy {
+//     margin-bottom: 100px;
+// }
+
+
+
+
+// -----------------------------
+// 5. Footer
+// -----------------------------
+
+
+.template-footer {
+    .flex(@display: flex); // Mixins
+    .justify-content(@justify: space-between); // Mixins
+
+    margin-top: 80px;
+
+
+
+    p {
+        color: @button-color;
+    }
+}

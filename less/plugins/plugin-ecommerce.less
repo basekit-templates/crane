@@ -1,0 +1,686 @@
+// ------------------------------------
+// Prism: CSS > Plugin: Ecommerce
+// ------------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #PRODUCT LIST
+//      #1.1 #PRODUCT FILTERS
+
+// 2. #SINGLE PRODUCT
+// 3. #PRODUCT IMAGES
+// 4. #BASKET WIDGET
+// 5. #BASKET SUMMARY
+
+
+
+
+// -----------------------------
+// 1. #Product List
+// -----------------------------
+
+// Product List
+.product-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+
+// This sets up the widths for each item
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 30px;
+
+    // Display 100% at mobile
+    @media only screen
+    and (max-width : 667px) {
+        width: 100%;
+    }
+}
+
+.title-link {
+    color: @heading-color;
+}
+
+// Adds margin bottom
+.ecomproduct__product-image {
+    @media @bp-tablet {
+        margin-bottom: 20px;
+    }
+}
+
+// Title
+.product-item-title,
+.product-item-price {
+    text-align: center;
+
+    @media only screen
+    and (max-width : 667px) {
+        font-size: @font-swatch5-font-size;
+        line-height: bkscale(@font-swatch5-line-height,0.8);
+        text-align: left;
+    }
+}
+
+
+
+
+// #1.1  Product Filters
+// ---------------------
+
+// Legend
+.product-filters  .legend {
+    display: none;
+}
+
+
+// Form Group
+.ecomproductslist__fieldset--filters .ecomproductslist__form-group {
+    width: 23%;
+    @media @bp-mobile {
+        width: 100%;
+    }
+}
+
+
+// Last Form Group
+.ecomproductslist__form-body .form-group:last-child {
+    margin-right: 0;
+}
+
+
+// Select
+.ecomproductslist__select {
+    width: 100%;
+}
+
+
+// Form Group, Select
+.ecomproductslist__form-group,
+.ecomproductslist__select {
+    @media @bp-mobile {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+// Styles filters
+.fieldset--filters .ecomproductslist__form-body {
+    text-align: center;
+    padding: 40px 10px 0;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 2px solid @bg-color;
+
+    @media @bp-tablet { width: 100%; }
+
+    @media @bp-mobile {
+        padding: 20px 10px 0;
+    }
+}
+
+
+// Styles Search
+.fieldset--search .ecomproductslist__form-body {
+    background-color: transparent;
+    margin: 10px 0;
+    border-bottom: 2px solid @black;
+}
+
+
+// Hides search label
+.label--search {
+    display: none;
+}
+
+
+// Filter Search Input
+.input--search.ecomproductslist__input {
+    padding: 0;
+    font-size: 14px;
+    text-indent: 10px;
+    width: 250px;
+    height: 45px;
+
+    @media @bp-mobile { width: 100%; }
+}
+
+
+
+
+// Responsive Columns
+// ------------------
+
+.responsivecolumns {
+    // Image
+    .product-item-image {
+        height: 200px;
+    }
+
+    // Price
+    .product-item-price {
+        max-width: inherit;
+        height: auto;
+        padding: 3px 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: bkscale(@font-swatch5-font-size,0.8);
+    }
+
+    .product-item-title {
+        font-size: @font-swatch5-font-size;
+        line-height: bkscale(@font-swatch5-line-height,0.8);
+        text-align: left;
+    }
+}
+
+
+
+// -----------------------------
+// 2. #Single Product
+// -----------------------------
+
+// Display images and content inline
+.product-images,
+.product-content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+// Product Images
+// --------------
+
+.product-images {
+    width: 45%;
+    margin-right: 3%;
+    @media @bp-tablet {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+// Product Content
+// ---------------
+
+.product-content {
+    width: 51%;
+    @media @bp-tablet {
+        width: 100%;
+    }
+}
+
+// Product Details
+.product-price { font-size: @font-swatch5-font-size; }
+
+
+// Product Form
+// ------------
+
+.ecomproduct__form {
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+
+.ecomproduct__form-group {
+    float: left;
+    margin-right: 30px;
+}
+
+
+.ecomproduct__form-body { margin: 0; }
+
+// Adds extra margin to fieldset at mobile
+.ecomproduct__fieldset {
+    @media @bp-mobile { margin-bottom: 20px;}
+}
+
+
+// Reset legend styles
+.ecomproduct__legend {
+    padding: 0 0 10px;
+    background-color: transparent;
+    border: 0;
+}
+
+
+// Form Select
+.ecomproduct__select {
+    min-width: 377px;
+
+    @media @bp-mobile {
+        min-width: 172px;
+    }
+}
+
+
+// Add to Basket,
+// View Basket Buttons
+.button--submit.ecomproduct__input,
+.ecomproduct__button {
+    min-width: 150px;
+    padding: 11px 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+// product Tags
+.tag-item {
+    margin-right: -4px;
+}
+.tag-item:first-child:before {
+    display: none;
+}
+.tag-item:before {
+    content: ',';
+}
+
+
+// Once product is added
+.form .button {
+    &.added {
+        &:before {
+            content: '\f00c'
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// 3. #Product Images
+// -----------------------------
+
+// Adds margin to product image div
+.product-item-image,
+.basket-item-image {
+    margin-bottom: 20px;
+}
+
+
+
+
+// -----------------------------
+// 4. #Basket Widget
+// -----------------------------
+
+// Basket Body
+.basket-body {
+    min-width: 40%;
+    width: 100%;
+	padding: 30px;
+
+    @media @bp-tablet {
+        width: 100%;
+    }
+    @media @bp-mobile {
+        padding: 20px;
+    }
+}
+
+// Basket Item
+.basket-item {
+	position: relative;
+	padding: 30px;
+	background-color: @bg-color;
+    border-top: 4px solid @contrast-color;
+
+    &:last-child {
+        border-bottom: 4px solid @contrast-color;
+    }
+}
+
+// Remove BG colour on summary form
+.form.basket-summary__summary-form { background-color: transparent; }
+
+
+// Basket Layout
+// -------------
+
+.basket-item-image,
+.basket-item-details {
+    display: inline-block;
+}
+
+
+// Basket Image
+// ------------
+
+.basket-item-image {
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+
+// Remove Item Button
+// ------------------
+
+// Position in top-right
+.item-remove {
+	position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    font-size: 14px;
+}
+
+// Remove icon spacing
+.item-remove:before {
+    margin-right: 0;
+}
+
+// Hide button text
+.remove-text {
+    display: none;
+}
+
+
+// Basket Footer
+// -------------
+
+.basket-footer {
+    margin-top: 0;
+    padding: 30px;
+    background-color: darken(@color-swatch1,10%);
+}
+
+.basket-total {
+    padding-bottom: 20px;
+    color: @heading-color;
+    text-transform: uppercase;
+}
+
+
+
+
+// -----------------------------
+// 5. #Basket Summary
+// -----------------------------
+
+// Summary Table
+// ------------------------------
+
+.summary-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+    margin: 0;
+
+    // Table and Cells Reset
+    // ------------------------------
+
+    &, td, th, .cell {
+        border: none;
+        background: transparent;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+
+
+    // Row Heading
+    // ------------------------------
+
+    .table-row--heading {
+        .cell {
+            padding-bottom: 1em;
+            border-bottom: 2px solid @black;
+        }
+    }
+
+    // Cell Image
+    // ------------------------------
+
+    .cell--image {
+        width: 126px;
+        padding-left: 10px;
+    }
+
+
+    // Cell Title
+    // ------------------------------
+
+    .cell--title {
+        width: auto;
+        padding-right: 10px;
+        padding-left: 16px;
+
+    }
+
+
+    // Item Title
+    // ------------------------------
+
+    .summary-item-title  {
+        font-size: @font-swatch4-font-size;
+    }
+
+        // Item Link
+
+        .summary-item-link {
+            color: @font-swatch5-color;
+        }
+
+
+    // Cell Quantity
+    // ------------------------------
+
+    .cell--quantity {
+        padding: 0 16px 0 0;
+        width: 10%;
+        min-width: 100px;
+    }
+
+
+    // Cell Total, Cell Price
+    // ------------------------------
+
+    .cell--total, .cell--price {
+        text-align: right;
+        padding: 0 16px;
+    }
+
+
+    // Order Total
+    // ------------------------------
+
+    .cell--order-total {
+        text-align: right;
+        background-color: @color-swatch1;
+    }
+
+
+    // Cell Image Item Link
+    // ------------------------------
+
+    .cell--image .summary-item-link {
+        width: 100px;
+        height: 100px;
+        display: block;
+        line-height: 80px;
+        background-position: -100%;
+        background-color: #fff;
+        padding: 10px;
+
+        // Image
+
+        .image {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 80px;
+            max-height: 80px;
+        }
+    }
+
+
+    // Row Order Total
+    // ------------------------------
+
+    .table-row--order-total {
+        background-color: transparent;
+    }
+
+        // Order Total
+        .order-total {
+            color: @font-swatch5-color;
+        }
+}
+
+
+// Quantity Wrap
+// ------------------------------
+
+.quantity-wrap {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    background-color: transparent;
+
+    // Button Quantity
+
+    .button--quantity {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    // Quantity Field
+
+    .quantity-field {
+        color: @font-swatch5-color;
+    }
+}
+
+
+
+
+// ------------------------------
+// Mobile Layout
+// ------------------------------
+
+@media @bp-mobile {
+
+
+    // Summary Table
+    // ------------------------------
+
+    .summary-table {
+
+        // Table elements to block elements
+
+        &, .table-row, .cell, .summary-body {
+            display: block;
+        }
+
+        // Table Row Heading
+
+        .table-row--heading {
+            display: none;
+        }
+
+        // Table Row
+
+        .table-row {
+            overflow: hidden;
+            margin-bottom: 10px;
+            clear: both;
+        }
+
+        // Cell Image
+
+        .cell--image {
+            float: left;
+        }
+
+        // Item Title
+
+        .summary-item-title  {
+            font-size: bkscale(@font-swatch4-font-size, 1);
+        }
+
+        // Cell Price, Cell Total, Cell Quantity LABELS
+
+        .cell--price, .cell--total, .cell--quantity {
+            &:before {
+                content: attr(data-title);
+                display: block;
+                font-size: 13px;
+            }
+        }
+
+        // Cell Quantity
+
+        .cell.cell--quantity {
+            clear: both;
+            padding: 6px 10px;
+            text-align: right;
+            position: relative;
+            width: auto;
+
+            // Pseudo Label - LESS Framework
+
+            &:before {
+                height: 30px;
+                line-height: 30px !important;
+                display: block;
+                position: absolute;
+                right: 90px;
+                top: 6px;
+            }
+        }
+
+        // Quantity Wrap
+
+        .quantity-wrap {
+            margin: 0 -5px 0 auto;
+            width: 80px;
+            max-width: 100%;
+            .button--quantity {
+                line-height: 20px;
+            }
+        }
+
+        // Cell Price
+
+        .cell--price {
+            clear: left;
+        }
+
+        // Order Total
+
+        .order-total {
+            text-align: center;
+        }
+
+        // Cell Price, Cell Total
+
+        .cell--price, .cell--total {
+            float: left;
+            width: 50%;
+            padding: 6px 10px;
+        }
+    }
+}

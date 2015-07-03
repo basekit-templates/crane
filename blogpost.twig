@@ -1,0 +1,33 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+{{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
+
+<div class="page-wrapper">
+
+    <!-- Container -->
+    <div class="container">
+
+        {% include "includes/header.twig" %}
+
+        <!-- Page Content -->
+        <section class="template-content">
+
+            <div class="post-container">
+
+            {{widget('blogpost', 'singleblogpost', {})|raw}}
+
+            </div>
+
+        </section>
+        <!-- End Page Content -->
+
+    </div>
+    <!-- End Container -->
+
+</div>
+<!-- End Page Wrapper -->
+
+{% endblock %}

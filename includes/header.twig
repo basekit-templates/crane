@@ -1,0 +1,18 @@
+<!-- Header include -->
+<header class="template-header">
+    <div class="container">
+        <div class="header--top">
+            <div class="company-info">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-default.png')})|raw}}
+                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            </div>
+
+            {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+        </div>
+
+        <div class="header--content">
+            {{widget('pagetitle', 'title', {})|raw}}
+        </div>
+
+    </div>
+</header>
