@@ -56,6 +56,17 @@
 }
 
 
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+.align-items(@align: stretch) {
+  -webkit-align-items: @align;
+     -moz-align-items: @align;
+      -ms-align-items: @align;
+          align-items: @align;
+}
+
+
 // Flex Line Wrapping
 // - applies to: flex containers
 // nowrap | wrap | wrap-reverse

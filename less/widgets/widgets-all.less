@@ -36,24 +36,6 @@
 // -----------------------------
 
 
-// // Company information
-// // -----------------------------
-
-// // Div that surrounds the company name and logo
-// .company-info {
-//     .flex-vert-center;
-//     .flex-wrap(@wrap: nowrap);
-
-//     @media @bp-mobile {
-//         .justify-content(@justify: center);
-
-//         -webkit-flex: 0 0 80%;
-//         -ms-flex: 0 0 80%;
-//         flex: 0 0 80%;
-//     }
-// }
-
-
 // Company Name
 // -----------------------------
 
@@ -122,176 +104,62 @@
 // -----------------------------
 
 
-// Gallery 3 Column Layout
-// -----------------------
+.gallery {
 
-// Title and description colour
-.image-title,
-.image-description {
-    color: @color-swatch1;
-}
+    // Gallery Item
+    // ------------
 
-
-// Gallery list container
-.gallery-list {
-    .flex;
-    .flex-wrap(wrap);
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-
-// Gallery Items
-// -----------------------
-
-.gallery .gallery-item {
-    position: relative;
-    width: 32%;
-    margin-bottom: 20px;
-    z-index: 0; // Stops gallery from being visible when nav is open
-    overflow: hidden;
-
-    // Display 100% at mobile
-    @media @bp-mobile {
-        width: 100%;
-        margin-bottom: 20px;
+    .gallery-item {
+        height: 280px;
+        overflow: hidden;
     }
-}
 
 
-// Gallery item links
-.gallery .image-link {
-    display: block;
-    padding-top: 100%; // Should keep gallery perfectly square at any size.
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 
-    // Adds slight black tint to image so the text is more readble
-    &:after {
-        content: "";
-        background-color: fade(@color-swatch7, 15%);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
+    // Gallery Caption
+    // ---------------
+
+    .caption {
+        display: block !important;
         height: 100%;
-        width: 100%;
+        opacity: 0; // Hides caption by default
+
+        .transition(@duration:0.3s, @ease:ease-in-out); // Mixins
     }
-}
-
-
-// Gallery hide img element (uses background cover technique)
-.gallery .image {
-    display: none;
-}
-
-
-// Gallery Caption
-// -----------------------
-
-.gallery .caption {
-    display: none;
-    margin: 0;
-    padding: 20px;
-    background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8);
-}
-
-
-a.gallery__caption-link:hover {
-    text-decoration: none;
-}
-
-
-// Gallery show caption on hover
-.gallery .figure:hover .caption {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
-}
 
 
 
 
-// Gallery Caption
-// --------------------
+    // Hover State
+    // ---------------
 
-.gallery .caption,
-.gallery .figure:hover .caption {
-    background-color: transparent !important;
-    padding: 20px 20px 20px 0 !important;
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
+    .figure:hover .caption {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+
+
+    // Caption Link
+    // ---------------
+
+    a.gallery__caption-link:hover {
+        text-decoration: none;
+    }
+
+
+
+    // Smaller screens
+    // ---------------
 
     @media @bp-tablet {
-        display: none;
+        .gallery-item {
+            height: 210px;
+        }
     }
 }
 
-
-// Title & Description
-
-.gallery__image-title {
-    font-family: @font-swatch2-font-family;
-    font-size: @font-swatch2-font-size;
-    position: relative;
-    margin: 0 0 8px;
-    padding: 0.4em 1em;
-    background: @color-swatch2;
-
-    // Positions the title before hover
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-364px,0,0);
-    transform: translate3d(-364px,0,0);
-}
-
-
-.gallery__image-description {
-    display: relative;
-    margin: 0 0 8px;
-    padding: 0.4em 1em;
-    background: @color-swatch2;
-
-    // Positions the title before hover
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-364px,0,0);
-    transform: translate3d(-364px,0,0);
-}
-
-
-.gallery__figure:hover .gallery__image-title ,
-.gallery__figure:hover .gallery__image-description{
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-}
-
-
-.gallery__image-title {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-}
-
-
-.gallery__image-description {
-    -webkit-transition-delay: 0.15s;
-    transition-delay: 0.15s;
-}
-
-// Removes any captions when the image is in a column
-.responsivecolumns .gallery__image-title,
-.responsivecolumns .gallery__image-description {
-    display: none;
-}
 
 
 
@@ -699,60 +567,135 @@ textarea,
 // -----------------------------
 
 
-// Tweet Item
-// ----------
+.twitter {
 
-.responsivecolumns {
+    // Tweet Item
+    // ----------
+    .tweet-list {
+        .flex(@display: flex);
+        .justify-content(@justify: space-around);
+        .flex-wrap(@wrap: wrap);
+    }
+
+
+
+
+    // Tweet Item
+    // ----------
+
+    .tweet-item {
+        height: 100%;
+        min-height: 250px;
+        text-align: center;
+        display: inline-block;
+        background-color: @button-color;
+
+
+        .flex(@display: flex);
+        .align-items(@align: center);
+        .justify-content(@justify: center);
+
+        -webkit-flex: 1 1 32%;
+        -ms-flex: 1 1 32%;
+        flex: 1 1 32%;
+
+
+
+        .account-name,
+        .tweet-content,
+        .tweet-metadata,
+        a {
+            color: @bg-color;
+        }
+
+
+        // .tweet-metadata {
+        //     font-size: bk-scale()
+        // }
+
+
+        .account-name:before {
+            content: "\f099";
+            color: @bg-color;
+            color: #ffffff;
+            display: block;
+            font-family: 'FontAwesome', sans-serif;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+
+
+        &:nth-of-type(odd) {
+            background-color: fade(@button-color,80%);
+        }
+    }
+
+
+
+
+    // Avatar
+    // ----------
+
     .avatar {
-        margin-bottom: 20px;
+        display: none;
     }
+
 }
 
 
-// // Avatar & Tweet Wrap
-// // -------------------
-
-// Tweet Wrap
-.tweet-wrap {
-    width: 85%;
-    padding: 0 20px;
-}
+// .responsivecolumns {
+//     .avatar {
+//         margin-bottom: 20px;
+//     }
+// }
 
 
-// Both
-.avatar,
-.tweet-wrap {
-    display: inline-block; // Display element inline
-    vertical-align: top;
+// // // Avatar & Tweet Wrap
+// // // -------------------
 
-    @media @bp-tablet {
-        margin-bottom: 10px;
-        padding: 0;
-    }
-}
+// // Tweet Wrap
+// .tweet-wrap {
+//     width: 85%;
+//     padding: 0 20px;
+// }
 
 
-// Account Link (Username)
-// -----------------------
+// // Both
+// .avatar,
+// .tweet-wrap {
+//     display: inline-block; // Display element inline
+//     vertical-align: top;
 
-.account-link {
-    padding-bottom: 1px;
-    font-family: @font-swatch1-font-family;
-
-    &:hover {
-        border-bottom: 2px solid @color-swatch7;
-        text-decoration: none;
-    }
-}
+//     @media @bp-tablet {
+//         margin-bottom: 10px;
+//         padding: 0;
+//     }
+// }
 
 
-// Tweet Metadata
-// --------------
+// // Account Link (Username)
+// // -----------------------
 
-.tweet-metadata {
-    font-size: 12px;
-    color: lighten(@font-swatch5-color,10%);
-}
+// .account-link {
+//     padding-bottom: 1px;
+//     font-family: @font-swatch1-font-family;
+
+//     &:hover {
+//         border-bottom: 2px solid @color-swatch7;
+//         text-decoration: none;
+//     }
+// }
+
+
+// // Tweet Metadata
+// // --------------
+
+// .tweet-metadata {
+//     font-size: 12px;
+//     color: lighten(@font-swatch5-color,10%);
+// }
 
 
 
