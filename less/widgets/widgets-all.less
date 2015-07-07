@@ -63,17 +63,6 @@
 }
 
 
-// // Logo Image
-// .logo-image {
-//     max-width: 200px;
-// }
-
-
-// .logo-link {
-//     font-size: 0;
-// }
-
-
 
 
 // -----------------------------
@@ -484,8 +473,8 @@ label {
 
 // Select box
 .select {
-    border: 2px solid @black;
-    color: @black;
+    border: 2px solid @contrast-color;
+    color: @paragraph-color;
     font-size: bkscale(@font-swatch5-font-size, 0.9);
     border-radius: 0;
     background-color: transparent;
@@ -595,9 +584,9 @@ textarea,
         .align-items(@align: center);
         .justify-content(@justify: center);
 
-        -webkit-flex: 1 1 32%;
-        -ms-flex: 1 1 32%;
-        flex: 1 1 32%;
+        -webkit-flex: 1 1 33.3%;
+        -ms-flex: 1 1 33.3%;
+        flex: 1 1 33.3%;
 
 
 
@@ -609,9 +598,14 @@ textarea,
         }
 
 
-        // .tweet-metadata {
-        //     font-size: bk-scale()
-        // }
+        .account-name {
+            font-size: bkscale(@font-swatch3-font-size,0.7);
+        }
+
+
+        .tweet-metadata {
+            font-size: bkscale(@font-swatch5-font-size,0.8);
+        }
 
 
         .account-name:before {
@@ -642,60 +636,21 @@ textarea,
         display: none;
     }
 
+
+
+    // Smaller screens
+    // ---------------
+
+    @media @bp-tablet {
+
+        // Tweet List
+        // ----------
+        .tweet-list {
+            display: block;
+        }
+    }
+
 }
-
-
-// .responsivecolumns {
-//     .avatar {
-//         margin-bottom: 20px;
-//     }
-// }
-
-
-// // // Avatar & Tweet Wrap
-// // // -------------------
-
-// // Tweet Wrap
-// .tweet-wrap {
-//     width: 85%;
-//     padding: 0 20px;
-// }
-
-
-// // Both
-// .avatar,
-// .tweet-wrap {
-//     display: inline-block; // Display element inline
-//     vertical-align: top;
-
-//     @media @bp-tablet {
-//         margin-bottom: 10px;
-//         padding: 0;
-//     }
-// }
-
-
-// // Account Link (Username)
-// // -----------------------
-
-// .account-link {
-//     padding-bottom: 1px;
-//     font-family: @font-swatch1-font-family;
-
-//     &:hover {
-//         border-bottom: 2px solid @color-swatch7;
-//         text-decoration: none;
-//     }
-// }
-
-
-// // Tweet Metadata
-// // --------------
-
-// .tweet-metadata {
-//     font-size: 12px;
-//     color: lighten(@font-swatch5-color,10%);
-// }
 
 
 
@@ -706,7 +661,7 @@ textarea,
 
 hr,
 hr.rule {
-    background-color: @black;
+    background-color: @contrast-color;
     height: 2px;
 }
 
@@ -730,7 +685,7 @@ hr.rule {
 // -----------------------------
 
 .message {
-    background-color: @contrast-color;
+    border: 3px solid @contrast-color;
     margin: 20px 0;
     padding: 10px 40px;
     display: inline-block;
