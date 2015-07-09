@@ -53,6 +53,15 @@ body {
     width: 90%;
 }
 
+.blog-post-container {
+    width: 60%;
+    margin: 0 auto;
+
+    @media @tablet {
+        width: 80%;
+    }
+}
+
 
 
 // -----------------------------
@@ -185,15 +194,6 @@ body {
 // -----------------------------
 
 
-// .page-wrapper {
-//     padding-top: 40px;
-
-//     @media @bp-mobile {
-//         padding-top: 70px;
-//     }
-// }
-
-
 .template-content {
     margin-top: 60px;
 
@@ -203,15 +203,15 @@ body {
         padding: 60px 20px;
     }
 
+    &.blog-post-container {
+        background-color: @bg-color;
+        padding: 60px 20px;
+    }
+
     @media @bp-mobile {
         margin-top: 40px;
     }
 }
-
-
-// .home-copy {
-//     margin-bottom: 100px;
-// }
 
 
 

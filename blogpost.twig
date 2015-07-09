@@ -2,32 +2,22 @@
 
 {% block content %}
 
-
-{{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
-
-<div class="page-wrapper">
+{% include "includes/header.twig" %}
 
     <!-- Container -->
     <div class="container">
 
-        {% include "includes/header.twig" %}
-
         <!-- Page Content -->
-        <section class="template-content">
-
-            <div class="post-container">
+        <section class="template-content blog-post-container">
 
             {{widget('blogpost', 'singleblogpost', {})|raw}}
-
-            </div>
 
         </section>
         <!-- End Page Content -->
 
+        {% include "includes/footer.twig" %}
+
     </div>
     <!-- End Container -->
-
-</div>
-<!-- End Page Wrapper -->
 
 {% endblock %}
