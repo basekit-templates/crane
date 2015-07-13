@@ -120,7 +120,11 @@ body {
 
         // Wraps the logo and company name at mobile
         @media @mobile {
-            .flex-wrap(@wrap: wrap)
+            .flex-wrap(@wrap: wrap);
+            .align-content(@align: flex-start);
+            -webkit-flex: 1 0 50%;
+            -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
         }
     }
 
