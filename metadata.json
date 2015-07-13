@@ -105,7 +105,7 @@
         },
         "font6": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "18px",
+            "font-size": "14px",
             "font-weight": "300",
             "line-height": "inherit",
             "color": "@color-swatch6",
@@ -142,7 +142,7 @@
         },
         "font10": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "18px",
+            "font-size": "22px",
             "font-weight": "300",
             "line-height": "inherit",
             "color": "@color-swatch6",
