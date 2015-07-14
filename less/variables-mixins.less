@@ -46,17 +46,6 @@
 
 
 // Cross-axis Alignment
-// - applies to: flex items
-// auto | flex-start | flex-end | center | baseline | stretch
-.align-self(@align: auto) {
-  -webkit-align-self: @align;
-     -moz-align-self: @align;
-      -ms-align-self: @align;
-          align-self: @align;
-}
-
-
-// Cross-axis Alignment
 // - applies to: flex containers
 // flex-start | flex-end | center | baseline | stretch
 .align-items(@align: stretch) {
@@ -64,6 +53,17 @@
      -moz-align-items: @align;
       -ms-align-items: @align;
           align-items: @align;
+}
+
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+.align-self(@align: auto) {
+  -webkit-align-self: @align;
+     -moz-align-self: @align;
+      -ms-align-self: @align;
+          align-self: @align;
 }
 
 
