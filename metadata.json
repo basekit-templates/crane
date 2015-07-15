@@ -3,7 +3,7 @@
     "thumbnail": "thumbnail.png",
     "screenshot": "balkan-screenshot.jpg",
     "widgetVersion":2,
-    "pageTypes": ["home","blogpost"],
+    "pageTypes": ["home"],
     "templateType":"blog",
     "tags": {
         "en": ["blog", "photography", "design", "portfolio", "gallery", "camera", "images", "technology", "creative", "media"],
