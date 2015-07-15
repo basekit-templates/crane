@@ -1,7 +1,7 @@
 {
     "name": "Crane",
     "thumbnail": "thumbnail.png",
-    "screenshot": "balkan-screenshot.jpg",
+    "screenshot": "crane-screenshot.jpg",
     "widgetVersion":2,
     "pageTypes": ["home"],
     "templateType":"blog",
