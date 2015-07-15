@@ -214,7 +214,8 @@
     width: 50px;
     height: 47px;
     padding: 22px 10px;
-    position: relative;
+    position: absolute;
+    right: 0;
     margin: 31px auto;
     text-indent: 9999px;
     overflow: hidden;
@@ -278,7 +279,6 @@
     .open & {
         background-color: fade(@black, 0%);
         z-index: 100000;
-        position: relative;
 
         &:before {
             top: 23px; background: @black; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
