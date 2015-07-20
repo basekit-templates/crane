@@ -273,7 +273,7 @@ button.pause-toggle {
     width: 50px;
     height: 50px;
     padding: 0;
-    color: @bg-color;
+    color: @contrast-color;
     background-color: transparent;
     font-size: 15px;
     &:hover {
@@ -600,6 +600,11 @@ textarea,
             color: @bg-color;
         }
 
+        .tweet-content a,
+        .tweet-metadata a {
+            text-decoration: underline;
+        }
+
 
         .account-name {
             font-size: bkscale(@font-swatch3-font-size,0.7);
@@ -631,7 +636,6 @@ textarea,
 
 
 
-
     // Avatar
     // ----------
 
@@ -639,6 +643,14 @@ textarea,
         display: none;
     }
 
+
+
+    // Messages
+    // ----------
+
+    .message p {
+        color: @bg-color;
+    }
 
 
     // Smaller screens
