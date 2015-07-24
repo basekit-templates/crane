@@ -3,6 +3,14 @@
 // ------------------------------
 
 
+// Navigation Item
+// -----------------
+
+.navigation-item {
+    cursor: pointer;
+}
+
+
 // Item Name
 // -----------------
 
@@ -223,7 +231,7 @@
     .animation;
 
     // Displays as icon's middle bar
-    background-color: @black;
+    background-color: @spare;
     background-clip: content-box;
     width: 50px;
     height: 47px;
@@ -251,7 +259,7 @@
         position: absolute;
         left: 10px;
         display: block;
-        background: @black;
+        background: @spare;
         margin-right: 0;
         margin-left: 0;
         -webkit-transition: all 0.25s ease-in-out;
@@ -279,10 +287,10 @@
 
 
     &:hover {
-        background-color: @black;
+        background-color: @spare;
 
         &:after, &:before {
-            background: @black;
+            background: @spare;
         }
     }
 
@@ -291,16 +299,16 @@
     // ------------------------------
 
     .open & {
-        background-color: fade(@black, 0%);
+        background-color: fade(@spare, 0%);
         z-index: 100000;
 
         &:before {
-            top: 23px; background: @black; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
+            top: 23px; background: @spare; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
 
         }
 
         &:after {
-            bottom: 21px; background: @black; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
+            bottom: 21px; background: @spare; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
         }
     }
 }
