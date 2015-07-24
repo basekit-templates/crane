@@ -248,6 +248,23 @@ body {
     }
 }
 
+// Floating footer flexbox fix
+// ---------------------------
+.container {
+    display: flex; // Switch on flexbox layout
+    flex-direction: column; // Orient flexbox to columns
+    height: 100vh; // Set height to the height of the viewport
+
+    // Apply flex shrink 0 to all direct childer element
+    > * {
+        flex-shrink: 0;
+    }
+}
+
+.template-content {
+    flex: 1 0 auto; // Stretch the body content to push the footer down
+}
+
 
 
 
