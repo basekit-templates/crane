@@ -510,25 +510,12 @@ textarea,
     // Padding is set in stylesheet.less
     border: 2px solid @button-color;
     resize: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
     &:focus {
         border-color: @contrast-color;
         box-shadow: none;
     }
-
-    @media @bp-tablet {
-        // Fix for iOS devices
-        -webkit-appearance: none;
-        -webkit-border-radius: 0;
-    }
-}
-
-
-// Inputs: Search
-// --------------
-
-.input--search {
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
 }
 
 
