@@ -101,8 +101,33 @@
     // -------------------
 
     .navigation-body {
+
+        display: block;
+        z-index: 1;
+        opacity: 0;
+        width: auto;
+        overflow: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
         height: 100%;
-        overflow: scroll;
+
+        background-color: @contrast-color;
+
+        &.open {
+            opacity: 1;
+        }
+}
+
+    .navigation-toggle {
+        z-index: 9999;
+    }
+
+    .navigation-list {
+        margin: 40px 40px 0 10px !important;
+        padding-right: 60px;
     }
 
     // .navigation-list:before {
@@ -120,42 +145,42 @@
     //     position: absolute;
     // }
 
-    .container.overflow {
-        overflow: scroll;
-        height: 100vh;
-    }
+    // .container.overflow {
+    //     overflow: scroll;
+    //     height: 100vh;
+    // }
 
-    .navigation-list:before {
-        content:"";
-        width: 90%;
-        height: 100vh;
-        display: block;
-        overflow: scroll;
-        position: absolute;
-    }
+    // .navigation-list:before {
+    //     content:"";
+    //     width: 90%;
+    //     height: 100vh;
+    //     display: block;
+    //     overflow: scroll;
+    //     position: absolute;
+    // }
 
-    .navigation-list {
-        position: fixed;
-        -webkit-backface-visibility: hidden;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        height: 100%;
-        width: 100%;
-        .transform(@x:100%, @y:0);
-        transition-duration: 0.4s;
+    // .navigation-list {
+    //     position: fixed;
+    //     -webkit-backface-visibility: hidden;
+    //     left: 0;
+    //     top: 0;
+    //     height: 100vh;
+    //     height: 100%;
+    //     width: 100%;
+    //     .transform(@x:100%, @y:0);
+    //     transition-duration: 0.4s;
 
-        padding: 150px 20px;
-        background-color: @contrast-color;
+    //     padding: 150px 20px;
+    //     background-color: @contrast-color;
 
-        z-index: 2;
+    //     z-index: 2;
 
-        // Allows scrolling on mobile
-        &.open {
-            overflow: scroll;
-            -ms-overflow-style: scrollbar;
-        }
-    }
+    //     // Allows scrolling on mobile
+    //     &.open {
+    //         overflow: scroll;
+    //         -ms-overflow-style: scrollbar;
+    //     }
+    // }
 
 
     // Hides navigation until toggled
