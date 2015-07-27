@@ -43,7 +43,14 @@
         $( ".navigation-toggle" ).click(function() {
             $( ".bk-extendednavigation" ).toggleClass( "open" );
             $( "body, html" ).toggleClass( "noscroll" );
-            $( ".navigation-body" ).toggleClass( "open" );
+        });
+
+        // Toggles class open to display/hide folders
+
+        $( ".navigation-item.folder .item-name--parent" ).each(function() {
+            $( this ).click(function() {
+                    $( this ).parent( ".navigation-item.folder" ).toggleClass( "open" );
+            });
         });
 
     </script>

@@ -104,26 +104,6 @@
         height: 100%;
     }
 
-    // .navigation-list:before {
-    //     height: 100%;
-    //     height: 100%;
-    //     overflow: scroll;
-    //     position: absolute;
-
-    // }
-
-    // .navigation-wrapper {
-    //     height: 100%;
-    //     height: 100%;
-    //     overflow: scroll;
-    //     position: absolute;
-    // }
-
-    .container.overflow {
-        overflow: scroll;
-        height: 100vh;
-    }
-
     .navigation-list {
         position: fixed;
         -webkit-backface-visibility: hidden;
@@ -137,8 +117,6 @@
 
         padding: 150px 20px;
         background-color: @contrast-color;
-
-        z-index: 2;
 
         // Allows scrolling on mobile
         &.open {
@@ -207,9 +185,6 @@
         background-color: @bg-color;
         white-space: nowrap;
 
-        .transform(@x:-5px, @y:0);
-        .transition(@duration:0.4s, @ease:ease-in-out);
-
         display: block;
         position: absolute;
         height: 0;
@@ -220,6 +195,25 @@
         @media @bp-tablet {
             left: 0;
         }
+    }
+
+
+
+
+    // Less Framework Reset
+
+    .navigation-item:hover .navigation-list--children {
+        display: none;
+    }
+
+
+
+    // Opens the navigation folder
+
+    .navigation-list--children {
+        .navigation-item.folder.open & {
+                display: block;
+            }
     }
 
 
