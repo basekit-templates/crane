@@ -440,3 +440,88 @@
     height: 25px;
 }
 
+.summary-table {
+    width: 100%;
+    // Table Row
+    .table-row {
+        @media @bp-mobile  {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-direction: normal;
+            -moz-box-direction: normal;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+
+            border-bottom: 1px solid darken(@color-swatch1,10%);
+        }
+    }
+
+    // Table Row Heading
+    .table-row--heading {
+        @media @bp-mobile {
+            display: none;
+        }
+    }
+
+    // Column: Image
+    .cell--image {
+        vertical-align: top;
+        width: 15%;
+    }
+
+    // Column: Price & Total
+    .cell--price,
+    .cell--total {
+        width: 10%;
+        @media @bp-mobile {
+            border-top: 1px solid darken(@color-swatch1,10%)!important;
+        }
+    }
+
+    // Table Cell: General
+    .cell {
+        vertical-align: middle;
+        padding: 8px 12px;
+        border-radius: 0;
+        @media @bp-mobile {
+            width: 100%;
+            border: 0;
+            display: block;
+        }
+        &:not(.cell--title):before {
+            @media @bp-mobile {
+                content: attr(data-title);
+                display: block;
+                font-size: 12px;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    // Column: Title
+    .cell--title {
+        width: 50%;
+        @media @bp-mobile {
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    // Column: Quantity
+    .cell--quantity {
+        width: 15%;
+        @media @bp-mobile {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+    }
+
+}
+
