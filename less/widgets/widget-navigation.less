@@ -209,18 +209,24 @@
     .navigation-list--children {
         .navigation-item.folder.open-folder & {
                 display: block;
+                height: auto;
+                padding: 0;
+                position: relative;
+                opacity: 1;
+                .transform(@x:0, @y:0);
+                visibility: visible;
             }
     }
 
 
-    .navigation-list.open .navigation-item:hover .navigation-list--children {
-      height: auto;
-      padding: 0;
-      position: relative;
-      opacity: 1;
-      .transform(@x:0, @y:0);
-      visibility: visible;
-    }
+    // .navigation-list.open .navigation-item:hover .navigation-list--children {
+    //   height: auto;
+    //   padding: 0;
+    //   position: relative;
+    //   opacity: 1;
+    //   .transform(@x:0, @y:0);
+    //   visibility: visible;
+    // }
 
 
 
