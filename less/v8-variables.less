@@ -16,23 +16,23 @@
 // site
 @color__body--background: darken(@color-swatch1,10%);
 @color__link--text: @color-swatch2;
-@color__companyname--text: @color-swatch1;
+@color__companyname--text: @font-swatch10-color;
 
 // typography
-@color__h1--text: @color-swatch4;
-@color__h2--text: @color-swatch4;
-@color__h3--text: @color-swatch4;
-@color__h4--text: @color-swatch4;
-@color__p--text: @color-swatch5;
+@color__h1--text: @font-swatch1-color;
+@color__h2--text: @font-swatch2-color;
+@color__h3--text: @font-swatch3-color;
+@color__h4--text: @font-swatch4-color;
+@color__p--text: @font-swatch5-color;
 
 // navigation
-@color__navigation-item--text: @color-swatch6;
+@color__navigation--text: @font-swatch10-color;
 @color__navigation--text--hover: @color__secondary;
 
 // button
 @color__button--background: @color-swatch3;
 @color__button--background--hover: @color-swatch2;
-@color__button--text: @color-swatch1;
+@color__button--text: @font-swatch7-color;
 
 // header
 @color__header--background: @color-swatch2;
@@ -72,7 +72,7 @@
 @button-color:          @color__button--background;               // Button BG Color
 @button-color-alt:      lighten(@color__button--background,20%);  // Button BG Color
 
-@heading-color:         @color__h1--text;                         // Heading Text Color (H1 - H4)
+@heading-color:         @color-swatch4;                         // Heading Text Color (H1 - H4)
 @paragraph-color:       @color__p--text;                          // Paragraph Text Color
 
 @title-color:           @color__secondary;                        // The yellow colour used in the page title and nav
@@ -157,14 +157,14 @@ button,
 .extendednavigation {
     // typography
     .extendednavigation__item-name {
-        color: @color__navigation-item--text;
+        color: @color__navigation--text;
         &:hover {
             color: @color__navigation--text--hover;
         }
     }
 
     .item-name--parent:after {
-            border-top-color: @color__navigation-item--text;
+            border-top-color: @color__navigation--text;
     }
 }
 
