@@ -167,7 +167,7 @@
             "color__p--text": "@font-swatch5-color"
         },
         "navigation": {
-            "color__navigation-item--text": "@font-swatch10-color",
+            "color__navigation-item--text": "@font-swatch6-color",
             "color__navigation--text--hover": "@color__secondary"
         },
         "button": {
@@ -176,7 +176,7 @@
             "color__button--text": "@font-swatch7-color"
         },
         "header": {
-            "@color__header--background": "@color-swatch2"
+            "color__header--background": "@color-swatch2"
         },
         "gallery": {
             "color__gallery-caption--background": "fade(@color__secondary,30%)",
@@ -191,7 +191,7 @@
         "ecommerce": {
             "color__ecomproductslist-product-item--background": "@color-swatch1",
             "color__ecomproduct-title--text": "@color-swatch4",
-            "color__ecomproduct-price--text": "@color-swatch5"
+            "color__ecomproduct-price--text": "@paragraph-color"
         }
     }
 }
