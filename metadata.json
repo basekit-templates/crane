@@ -167,7 +167,7 @@
             "color__p--text": "@font-swatch5-color"
         },
         "navigation": {
-            "color__navigation-item--text": "@font-swatch6-color",
+            "color__navigation--text": "@font-swatch6-color",
             "color__navigation--text--hover": "@color__secondary"
         },
         "button": {
