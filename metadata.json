@@ -1,5 +1,6 @@
 {
     "name": "Crane",
+    "versionTenCompatible": 1,
     "thumbnail": "thumbnail.png",
     "screenshot": "crane-screenshot.jpg",
     "widgetVersion":2,
